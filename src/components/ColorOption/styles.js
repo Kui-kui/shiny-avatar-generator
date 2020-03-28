@@ -27,10 +27,20 @@ export default styled.div`
     margin-top: 0;
   }
 
+  .sketch-backdrop {
+    bottom: 0;
+    left:0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1;
+  }
+
   .sketch-picker {
     left: 80px;
     position: absolute;
     top: 40px;
     z-index: 2;
+
   },
 `;

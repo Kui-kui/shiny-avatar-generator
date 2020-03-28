@@ -18,11 +18,17 @@ const ColorOption = ({ color, label, onChange }) => {
           <div className="color-preview" />
         </div>
         {displayColorPicker ? (
-          <SketchPicker
-            className="picker"
-            color={color}
-            onChangeComplete={onChange}
-          />
+          <>
+            <div
+              className="sketch-backdrop"
+              onClick={() => setDisplayColorPicker(false)}
+            />
+            <SketchPicker
+              className="picker"
+              color={color}
+              onChangeComplete={onChange}
+            />
+          </>
         ) : null}
       </Styled>
     </>
