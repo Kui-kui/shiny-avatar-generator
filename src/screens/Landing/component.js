@@ -1,11 +1,13 @@
 import React, { useState, useCallback } from 'react';
 
+import Body from '../../components/Body';
 import Clothes from '../../components/Clothes';
 import ColorOption from '../../components/ColorOption';
 import useWindowSize from '../../hooks/useWindowSize';
 import Styled from './styles';
 
 const initialColors = {
+  body: '#FFE9D0',
   clothes: '#458FFF',
 };
 
@@ -22,6 +24,11 @@ const Landing = () => {
       <div className="root">
         <div className="sidebar">
           <ColorOption
+            color={colors.body}
+            label="Body color"
+            onChange={onColorChange('body')}
+          />
+          <ColorOption
             color={colors.clothes}
             label="Clothes color"
             onChange={onColorChange('clothes')}
@@ -30,6 +37,7 @@ const Landing = () => {
         <div className="body">
           <div className="preview">
             <Clothes className="preview__clothes" color={colors.clothes} />
+            <Body className="preview__body" color={colors.body} />
           </div>
         </div>
       </div>
