@@ -43,7 +43,7 @@ const Landing = () => {
         </div>
         <div className="body">
           <div className="preview">
-            <Clothes className="preview__clothes" color={colors.clothes} />
+            <Clothes color={colors.clothes} />
             <Body color={colors.body} />
             <Hair color={colors.hair} />
           </div>

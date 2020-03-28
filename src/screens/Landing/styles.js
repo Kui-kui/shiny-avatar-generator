@@ -15,13 +15,6 @@ export default styled.div`
     width: 400px;
   }
 
-  .preview__clothes {
-    position: absolute;
-    bottom: 0;
-    right: 62px;
-    z-index: 1;
-  }
-
   .root {
     align-items: center;
     background-color: #f5fbff;
