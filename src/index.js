@@ -1,15 +1,16 @@
 /* global document */
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { HashRouter, Route } from 'react-router-dom';
 
 import Landing from './screens/Landing';
 import * as serviceWorker from './serviceWorker';
 import './index.css';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Landing />
-  </React.StrictMode>,
+  <HashRouter basename="/">
+    <Route component={Landing} exact path="/" />
+  </HashRouter>,
   document.getElementById('root'),
 );
 
