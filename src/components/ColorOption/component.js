@@ -17,12 +17,14 @@ const ColorOption = ({ color, label, onChange }) => {
         >
           <div className="color-preview" />
         </div>
+        {displayColorPicker ? (
+          <SketchPicker
+            className="picker"
+            color={color}
+            onChangeComplete={onChange}
+          />
+        ) : null}
       </Styled>
-      {displayColorPicker ? (
-        <div className="popover">
-          <SketchPicker color={color} onChangeComplete={onChange} />
-        </div>
-      ) : null}
     </>
   );
 };

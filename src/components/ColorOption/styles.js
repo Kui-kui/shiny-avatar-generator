@@ -4,13 +4,13 @@ export default styled.div`
   align-items: center;
   display: flex;
   padding: 8px 0;
+  position: relative;
 
   .color-container {
     background-color: #fff;
     border-radius: 1px;
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    display: inline-block;
     padding: 5px;
   }
 
@@ -27,8 +27,10 @@ export default styled.div`
     margin-top: 0;
   }
 
-  .popover {
+  .sketch-picker {
+    left: 80px;
     position: absolute;
+    top: 40px;
     z-index: 2;
   },
 `;
