@@ -37,7 +37,7 @@ const Landing = () => {
         <div className="body">
           <div className="preview">
             <Clothes className="preview__clothes" color={colors.clothes} />
-            <Body className="preview__body" color={colors.body} />
+            <Body color={colors.body} />
           </div>
         </div>
       </div>
