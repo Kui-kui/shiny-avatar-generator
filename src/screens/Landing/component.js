@@ -3,12 +3,14 @@ import React, { useState, useCallback } from 'react';
 import Body from '../../components/Body';
 import Clothes from '../../components/Clothes';
 import ColorOption from '../../components/ColorOption';
+import Hair from '../../components/Hair';
 import useWindowSize from '../../hooks/useWindowSize';
 import Styled from './styles';
 
 const initialColors = {
   body: '#FFE9D0',
   clothes: '#458FFF',
+  hair: '#FFD947',
 };
 
 const Landing = () => {
@@ -33,11 +35,17 @@ const Landing = () => {
             label="Clothes color"
             onChange={onColorChange('clothes')}
           />
+          <ColorOption
+            color={colors.hair}
+            label="Hair color"
+            onChange={onColorChange('hair')}
+          />
         </div>
         <div className="body">
           <div className="preview">
             <Clothes className="preview__clothes" color={colors.clothes} />
             <Body color={colors.body} />
+            <Hair color={colors.hair} />
           </div>
         </div>
       </div>
