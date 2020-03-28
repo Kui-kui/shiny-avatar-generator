@@ -23,9 +23,7 @@ export default styled.div`
   }
 
   .label {
-    margin-bottom: 0;
     margin-right: 8px;
-    margin-top: 0;
   }
 
   .sketch-backdrop {

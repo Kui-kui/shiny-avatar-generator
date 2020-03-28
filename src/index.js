@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 
 import Landing from './screens/Landing';
 import * as serviceWorker from './serviceWorker';
+import './index.css';
 
 ReactDOM.render(
   <React.StrictMode>
