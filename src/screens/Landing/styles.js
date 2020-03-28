@@ -1,9 +1,16 @@
 import styled from 'styled-components';
 
 export default styled.div`
+  .button {
+    position: absolute;
+    bottom: 40px;
+  }
+
   .body {
+    align-items: center;
     display: flex;
     flex: 1;
+    flex-direction: column;
     justify-content: center;
   }
 
@@ -11,6 +18,7 @@ export default styled.div`
     background-color: #f5fbff;
     border: 20px solid white;
     height: 400px;
+    margin-bottom: 64px;
     position: relative;
     width: 400px;
   }

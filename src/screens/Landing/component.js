@@ -6,6 +6,7 @@ import Hair from '../../components/SVG/Hair';
 import useWindowSize from '../../hooks/useWindowSize';
 import Styled from './styles';
 import Sidebar from '../../components/Sidebar/component';
+import Button from '../../components/Button';
 
 const initialColors = {
   body: '#FFE9D0',
@@ -31,6 +32,11 @@ const Landing = () => {
             <Body color={colors.body} />
             <Hair color={colors.hair} />
           </div>
+          <Button
+            className="button"
+            label="Télécharger"
+            onClick={() => console.log('Test')}
+          />
         </div>
       </div>
     </Styled>

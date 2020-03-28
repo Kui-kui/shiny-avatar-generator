@@ -9,6 +9,7 @@ const Sidebar = ({ colors, onChange }) => {
   const { height } = useWindowSize();
   return (
     <Styled height={height}>
+      <p className="headline">Shiny Avatar Generator</p>
       <ColorOption
         color={colors.body}
         label="Body color"

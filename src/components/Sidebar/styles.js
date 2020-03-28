@@ -6,4 +6,12 @@ export default styled.div`
   height: ${({ height }) => `${height}px`};
   padding: 0 24px;
   width: 200px;
+
+  .headline {
+    font-size: 21px;
+    font-weight: 600;
+    margin-bottom: 32px;
+    margin-top: 24px;
+    text-align: center;
+  }
 `;
