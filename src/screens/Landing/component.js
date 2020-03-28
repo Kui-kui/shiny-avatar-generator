@@ -1,9 +1,9 @@
 import React, { useState, useCallback } from 'react';
 
-import Body from '../../components/Body';
-import Clothes from '../../components/Clothes';
+import Body from '../../components/SVG/Body';
+import Clothes from '../../components/SVG/Clothes';
 import ColorOption from '../../components/ColorOption';
-import Hair from '../../components/Hair';
+import Hair from '../../components/SVG/Hair';
 import useWindowSize from '../../hooks/useWindowSize';
 import Styled from './styles';
 
