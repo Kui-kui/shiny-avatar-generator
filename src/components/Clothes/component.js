@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Body = ({ className, color }) => {
+const Clothes = ({ className, color }) => {
   return (
     <svg
       className={className}
@@ -19,9 +19,9 @@ const Body = ({ className, color }) => {
   );
 };
 
-Body.propTypes = {
+Clothes.propTypes = {
   className: PropTypes.string.isRequired,
   color: PropTypes.string.isRequired,
 };
 
-export default Body;
+export default Clothes;

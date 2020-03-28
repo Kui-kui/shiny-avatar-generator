@@ -1,12 +1,12 @@
 import React, { useState, useCallback } from 'react';
 
-import Body from '../../components/Body';
+import Clothes from '../../components/Clothes';
 import ColorOption from '../../components/ColorOption';
 import useWindowSize from '../../hooks/useWindowSize';
 import Styled from './styles';
 
 const initialColors = {
-  body: '#458FFF',
+  clothes: '#458FFF',
 };
 
 const Landing = () => {
@@ -22,14 +22,14 @@ const Landing = () => {
       <div className="root">
         <div className="sidebar">
           <ColorOption
-            color={colors.body}
-            label="Body color"
-            onChange={onColorChange('body')}
+            color={colors.clothes}
+            label="Clothes color"
+            onChange={onColorChange('clothes')}
           />
         </div>
         <div className="body">
           <div className="preview">
-            <Body className="preview__body" color={colors.body} />
+            <Clothes className="preview__clothes" color={colors.clothes} />
           </div>
         </div>
       </div>
