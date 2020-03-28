@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/shiny-avatar/static/css/main.38de10a7.chunk.css",
-    "main.js": "/shiny-avatar/static/js/main.9e018663.chunk.js",
-    "main.js.map": "/shiny-avatar/static/js/main.9e018663.chunk.js.map",
-    "runtime-main.js": "/shiny-avatar/static/js/runtime-main.619b932f.js",
-    "runtime-main.js.map": "/shiny-avatar/static/js/runtime-main.619b932f.js.map",
-    "static/js/2.02663231.chunk.js": "/shiny-avatar/static/js/2.02663231.chunk.js",
-    "static/js/2.02663231.chunk.js.map": "/shiny-avatar/static/js/2.02663231.chunk.js.map",
-    "index.html": "/shiny-avatar/index.html",
-    "precache-manifest.91770a77e07117eefc912b765ae7ed8c.js": "/shiny-avatar/precache-manifest.91770a77e07117eefc912b765ae7ed8c.js",
-    "service-worker.js": "/shiny-avatar/service-worker.js",
-    "static/css/main.38de10a7.chunk.css.map": "/shiny-avatar/static/css/main.38de10a7.chunk.css.map",
-    "static/js/2.02663231.chunk.js.LICENSE.txt": "/shiny-avatar/static/js/2.02663231.chunk.js.LICENSE.txt"
+    "main.css": "/shiny-avatar-generator/static/css/main.38de10a7.chunk.css",
+    "main.js": "/shiny-avatar-generator/static/js/main.4ddacbf9.chunk.js",
+    "main.js.map": "/shiny-avatar-generator/static/js/main.4ddacbf9.chunk.js.map",
+    "runtime-main.js": "/shiny-avatar-generator/static/js/runtime-main.6632f443.js",
+    "runtime-main.js.map": "/shiny-avatar-generator/static/js/runtime-main.6632f443.js.map",
+    "static/js/2.d6c7f06e.chunk.js": "/shiny-avatar-generator/static/js/2.d6c7f06e.chunk.js",
+    "static/js/2.d6c7f06e.chunk.js.map": "/shiny-avatar-generator/static/js/2.d6c7f06e.chunk.js.map",
+    "index.html": "/shiny-avatar-generator/index.html",
+    "precache-manifest.15489d86f254c6e9f375446da4dd9c51.js": "/shiny-avatar-generator/precache-manifest.15489d86f254c6e9f375446da4dd9c51.js",
+    "service-worker.js": "/shiny-avatar-generator/service-worker.js",
+    "static/css/main.38de10a7.chunk.css.map": "/shiny-avatar-generator/static/css/main.38de10a7.chunk.css.map",
+    "static/js/2.d6c7f06e.chunk.js.LICENSE.txt": "/shiny-avatar-generator/static/js/2.d6c7f06e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.619b932f.js",
-    "static/js/2.02663231.chunk.js",
+    "static/js/runtime-main.6632f443.js",
+    "static/js/2.d6c7f06e.chunk.js",
     "static/css/main.38de10a7.chunk.css",
-    "static/js/main.9e018663.chunk.js"
+    "static/js/main.4ddacbf9.chunk.js"
   ]
 }
