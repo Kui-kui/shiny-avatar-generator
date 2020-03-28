@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/shiny-avatar/static/css/main.38de10a7.chunk.css",
+    "main.js": "/shiny-avatar/static/js/main.9e018663.chunk.js",
+    "main.js.map": "/shiny-avatar/static/js/main.9e018663.chunk.js.map",
+    "runtime-main.js": "/shiny-avatar/static/js/runtime-main.619b932f.js",
+    "runtime-main.js.map": "/shiny-avatar/static/js/runtime-main.619b932f.js.map",
+    "static/js/2.02663231.chunk.js": "/shiny-avatar/static/js/2.02663231.chunk.js",
+    "static/js/2.02663231.chunk.js.map": "/shiny-avatar/static/js/2.02663231.chunk.js.map",
+    "index.html": "/shiny-avatar/index.html",
+    "precache-manifest.91770a77e07117eefc912b765ae7ed8c.js": "/shiny-avatar/precache-manifest.91770a77e07117eefc912b765ae7ed8c.js",
+    "service-worker.js": "/shiny-avatar/service-worker.js",
+    "static/css/main.38de10a7.chunk.css.map": "/shiny-avatar/static/css/main.38de10a7.chunk.css.map",
+    "static/js/2.02663231.chunk.js.LICENSE.txt": "/shiny-avatar/static/js/2.02663231.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.619b932f.js",
+    "static/js/2.02663231.chunk.js",
+    "static/css/main.38de10a7.chunk.css",
+    "static/js/main.9e018663.chunk.js"
+  ]
+}
