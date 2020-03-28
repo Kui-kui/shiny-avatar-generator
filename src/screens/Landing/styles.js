@@ -1,42 +1,23 @@
 import styled from "styled-components";
 
 export default styled.div`
-  .App {
-    text-align: center;
+  .body {
+    position: absolute;
+    bottom: 0;
+    right: 42px;
   }
 
-  .App-logo {
-    height: 40vmin;
-    pointer-events: none;
+  .preview {
+    background-color: #f5fbff;
+    height: 400px;
+    position: relative;
+    width: 400px;
   }
 
-  @media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-      animation: App-logo-spin infinite 20s linear;
-    }
-  }
-
-  .App-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+  .root {
     align-items: center;
+    display: flex;
     justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-  }
-
-  .App-link {
-    color: #61dafb;
-  }
-
-  @keyframes App-logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+    height: ${({ height }) => `${height}px`};
   }
 `;

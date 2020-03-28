@@ -1,29 +1,20 @@
 import React from "react";
 
-import logo from "../../logo.svg";
+import Body from "../../components/Body";
+import useWindowSize from "../../hooks/useWindowSize.js";
 import Styled from "./styles.js";
 
-function Landing() {
+const Landing = () => {
+  const { height } = useWindowSize();
   return (
-    <Styled>
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+    <Styled height={height}>
+      <div className="root">
+        <div className="preview">
+          <Body className="body" color="#458FFF" />
+        </div>
       </div>
     </Styled>
   );
-}
+};
 
 export default Landing;
