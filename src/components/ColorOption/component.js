@@ -8,30 +8,28 @@ const ColorOption = ({ color, label, onChange }) => {
   const [displayColorPicker, setDisplayColorPicker] = useState(false);
 
   return (
-    <>
-      <Styled color={color}>
-        <p className="label">{label}</p>
-        <div
-          className="color-container"
-          onClick={() => setDisplayColorPicker(!displayColorPicker)}
-        >
-          <div className="color-preview" />
-        </div>
-        {displayColorPicker ? (
-          <>
-            <div
-              className="sketch-backdrop"
-              onClick={() => setDisplayColorPicker(false)}
-            />
-            <SketchPicker
-              className="picker"
-              color={color}
-              onChangeComplete={onChange}
-            />
-          </>
-        ) : null}
-      </Styled>
-    </>
+    <Styled color={color}>
+      <p className="label">{label}</p>
+      <div
+        className="color-container"
+        onClick={() => setDisplayColorPicker(!displayColorPicker)}
+      >
+        <div className="color-preview" />
+      </div>
+      {displayColorPicker ? (
+        <>
+          <div
+            className="sketch-backdrop"
+            onClick={() => setDisplayColorPicker(false)}
+          />
+          <SketchPicker
+            className="picker"
+            color={color}
+            onChangeComplete={onChange}
+          />
+        </>
+      ) : null}
+    </Styled>
   );
 };
 
