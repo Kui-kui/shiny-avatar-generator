@@ -1,6 +1,7 @@
 {
   "name": "shiny-avatar-generator",
   "version": "0.1.0",
+  "homepage": "https://Kui-kui.github.io/shiny-avatar-generator",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -9,6 +10,7 @@
     "color": "^3.1.2",
     "dom-to-image": "^2.6.0",
     "file-saver": "^2.0.2",
+    "gh-pages": "^2.2.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-color": "^2.18.0",
@@ -18,10 +20,12 @@
     "styled-components": "^5.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "deploy": "gh-pages -d build",
+    "eject": "react-scripts eject",
+    "predeploy": "yarn build",
+    "start": "react-scripts start",
+    "test": "react-scripts test"
   },
   "eslintConfig": {
     "extends": "react-app"
