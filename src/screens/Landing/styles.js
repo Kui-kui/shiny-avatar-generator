@@ -1,6 +1,13 @@
 import styled from 'styled-components';
 
 export default styled.div`
+  .avatar {
+    background-color: #f5fbff;
+    height: 400px;
+    position: relative;
+    width: 400px;
+  }
+
   .button {
     position: absolute;
     bottom: 40px;
@@ -15,12 +22,8 @@ export default styled.div`
   }
 
   .preview {
-    background-color: #f5fbff;
     border: 20px solid white;
-    height: 400px;
     margin-bottom: 64px;
-    position: relative;
-    width: 400px;
   }
 
   .root {

@@ -1,3 +1,6 @@
+/* global document */
+import domtoimage from 'dom-to-image';
+import FileSaver from 'file-saver';
 import React, { useState, useCallback } from 'react';
 
 import Body from '../../components/SVG/Body';
@@ -16,11 +19,26 @@ const initialColors = {
 
 const Landing = () => {
   const { height } = useWindowSize();
+
   const [colors, setColors] = useState(initialColors);
+  const [isDownloading, setIsDownloading] = useState(false);
 
   const onColorChange = useCallback((key) => ({ hex }) =>
     setColors({ ...colors, [key]: hex }),
   );
+
+  const downloadAvatar = useCallback(async () => {
+    setIsDownloading(true);
+    try {
+      const avatar = document.getElementById('avatar');
+      const blob = await domtoimage.toBlob(avatar);
+      await FileSaver.saveAs(blob, 'avatar.png');
+    } catch (err) {
+      console.log(err);
+    } finally {
+      setIsDownloading(false);
+    }
+  }, []);
 
   return (
     <Styled height={height}>
@@ -28,14 +46,17 @@ const Landing = () => {
         <Sidebar colors={colors} onChange={onColorChange} />
         <div className="body">
           <div className="preview">
-            <Clothes color={colors.clothes} />
-            <Body color={colors.body} />
-            <Hair color={colors.hair} />
+            <div className="avatar" id="avatar">
+              <Clothes color={colors.clothes} />
+              <Body color={colors.body} />
+              <Hair color={colors.hair} />
+            </div>
           </div>
           <Button
             className="button"
             label="Télécharger"
-            onClick={() => console.log('Test')}
+            loading={isDownloading}
+            onClick={downloadAvatar}
           />
         </div>
       </div>
