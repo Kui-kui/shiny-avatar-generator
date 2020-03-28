@@ -1,11 +1,12 @@
-import React from "react";
+import React from 'react';
 
-import Body from "../../components/Body";
-import useWindowSize from "../../hooks/useWindowSize.js";
-import Styled from "./styles.js";
+import Body from '../../components/Body';
+import useWindowSize from '../../hooks/useWindowSize';
+import Styled from './styles';
 
 const Landing = () => {
   const { height } = useWindowSize();
+
   return (
     <Styled height={height}>
       <div className="root">

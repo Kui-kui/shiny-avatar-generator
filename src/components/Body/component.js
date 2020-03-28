@@ -1,13 +1,14 @@
-import React from "react";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const Body = ({ className, color }) => {
   return (
     <svg
       className={className}
-      width="318"
+      fill="none"
       height="163"
       viewBox="0 0 318 163"
-      fill="none"
+      width="318"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -16,6 +17,11 @@ const Body = ({ className, color }) => {
       />
     </svg>
   );
+};
+
+Body.propTypes = {
+  className: PropTypes.string.isRequired,
+  color: PropTypes.string.isRequired,
 };
 
 export default Body;
