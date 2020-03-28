@@ -1,0 +1,1 @@
+# shiny-avatar-generator
