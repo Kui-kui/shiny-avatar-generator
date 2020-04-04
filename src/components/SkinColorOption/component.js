@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { CirclePicker } from 'react-color';
 
-import Dropdown from '../Dropdown';
+import Dropdown from '../core/Dropdown';
 import Styled, { pickerStyle } from './styles';
 
 const SKIN_COLORS = ['#FFE9D0', '#F7D2A7', '#C26604'];

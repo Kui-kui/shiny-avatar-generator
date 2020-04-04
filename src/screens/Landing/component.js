@@ -10,7 +10,7 @@ import Hair from '../../components/SVG/Hair';
 import useWindowSize from '../../hooks/useWindowSize';
 import Styled from './styles';
 import Sidebar from '../../components/Sidebar/component';
-import Button from '../../components/Button';
+import Button from '../../components/core/Button';
 
 const initialColors = {
   body: '#FFE9D0',
