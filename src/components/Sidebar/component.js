@@ -2,6 +2,7 @@ import React, { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 
 import ColorOption from '../ColorOption';
+import ClothesColorOption from '../ClothesColorOption';
 import SkinColorOption from '../SkinColorOption';
 import Separator from '../core/Separator';
 import Styled from './styles';
@@ -28,11 +29,13 @@ const Sidebar = ({ colors, onChange }) => {
         toggle={() => toggle('SKIN')}
       />
       <Separator />
-      <ColorOption
-        color={colors.clothes}
-        label="Clothes color"
+      <ClothesColorOption
+        color={colors.body}
+        isOpen={toggledOption === 'CLOTHES'}
         onChange={onChange('clothes')}
+        toggle={() => toggle('CLOTHES')}
       />
+      <Separator />
       <ColorOption
         color={colors.hair}
         label="Hair color"
