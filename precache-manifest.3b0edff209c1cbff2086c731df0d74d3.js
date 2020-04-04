@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "038a7eca637a73429ff77ec9a24f3e27",
+    "revision": "de8f48556468bfd509cd7d2346fb2bdb",
     "url": "/shiny-avatar-generator/index.html"
   },
   {
