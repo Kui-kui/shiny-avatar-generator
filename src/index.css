@@ -5,3 +5,7 @@ p {
   font-family: "Rubik", sans-serif;
   margin: 0;
 }
+
+path {
+  transition: fill 0.5s;
+}
