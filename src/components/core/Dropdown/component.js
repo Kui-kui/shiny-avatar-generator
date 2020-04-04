@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import AnimateHeight from 'react-animate-height';
 
 import Styled from './styles';
@@ -10,6 +10,12 @@ const Dropdown = ({ className, label, children, isOpen, toggle }) => {
     setHeight(height === 0 ? 'auto' : 0);
     toggle();
   }, [height, toggle]);
+
+  useEffect(() => {
+    if (isOpen === false) {
+      setHeight(0);
+    }
+  }, [isOpen]);
 
   return (
     <Styled className={className} isOpen={isOpen}>
