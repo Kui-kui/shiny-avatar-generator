@@ -9,7 +9,7 @@ const SKIN_COLORS = ['#FFE9D0', '#F7D2A7', '#C26604'];
 
 const SkinColorOption = ({ color, onChange, isOpen, toggle }) => {
   return (
-    <Styled>
+    <Styled isOpen={isOpen}>
       <Dropdown
         className="picker"
         isOpen={isOpen}

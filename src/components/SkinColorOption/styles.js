@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 
 export default styled.div`
-  margin-bottom: calc(16px + 14px);
+  margin-bottom: 24px;
+  margin-top: 8px;
 
   .picker {
-    margin-bottom: -14px;
+    margin-bottom: ${({ isOpen }) => (isOpen ? '-14px' : '0')};
+    margin-top: 16px;
   }
 `;
 

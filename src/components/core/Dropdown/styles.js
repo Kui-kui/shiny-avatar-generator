@@ -11,7 +11,7 @@ export default styled.div`
 
   .children {
     padding-left: 4px;
-    padding-top: 8px;
+    padding-top: 16px;
   }
 
   .labelContainer {
