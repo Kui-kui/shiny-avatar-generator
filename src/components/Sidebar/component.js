@@ -1,8 +1,8 @@
 import React, { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 
-import ColorOption from '../ColorOption';
 import ClothesColorOption from '../ClothesColorOption';
+import HairColorOption from '../HairColorOption';
 import SkinColorOption from '../SkinColorOption';
 import Separator from '../core/Separator';
 import Styled from './styles';
@@ -36,10 +36,11 @@ const Sidebar = ({ colors, onChange }) => {
         toggle={() => toggle('CLOTHES')}
       />
       <Separator />
-      <ColorOption
-        color={colors.hair}
-        label="Hair color"
+      <HairColorOption
+        color={colors.body}
+        isOpen={toggledOption === 'HAIR'}
         onChange={onChange('hair')}
+        toggle={() => toggle('HAIR')}
       />
     </Styled>
   );
