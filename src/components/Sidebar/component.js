@@ -3,12 +3,10 @@ import PropTypes from 'prop-types';
 
 import ColorOption from '../ColorOption';
 import Styled from './styles';
-import useWindowSize from '../../hooks/useWindowSize';
 
 const Sidebar = ({ colors, onChange }) => {
-  const { height } = useWindowSize();
   return (
-    <Styled height={height}>
+    <Styled>
       <p className="headline">Shiny Avatar Generator</p>
       <ColorOption
         color={colors.body}

@@ -2,6 +2,7 @@
 import domtoimage from 'dom-to-image';
 import FileSaver from 'file-saver';
 import React, { useState, useCallback } from 'react';
+import ReactSidebar from 'react-sidebar';
 
 import Body from '../../components/SVG/Body';
 import Clothes from '../../components/SVG/Clothes';
@@ -41,26 +42,30 @@ const Landing = () => {
   }, []);
 
   return (
-    <Styled height={height}>
-      <div className="root">
-        <Sidebar colors={colors} onChange={onColorChange} />
-        <div className="body">
-          <div className="preview">
-            <div className="avatar" id="avatar">
-              <Clothes color={colors.clothes} />
-              <Body color={colors.body} />
-              <Hair color={colors.hair} />
+    <ReactSidebar
+      docked
+      sidebar={<Sidebar colors={colors} onChange={onColorChange} />}
+    >
+      <Styled height={height}>
+        <div className="root">
+          <div className="body">
+            <div className="preview">
+              <div className="avatar" id="avatar">
+                <Clothes color={colors.clothes} />
+                <Body color={colors.body} />
+                <Hair color={colors.hair} />
+              </div>
             </div>
+            <Button
+              className="button"
+              label="Télécharger"
+              loading={isDownloading}
+              onClick={downloadAvatar}
+            />
           </div>
-          <Button
-            className="button"
-            label="Télécharger"
-            loading={isDownloading}
-            onClick={downloadAvatar}
-          />
         </div>
-      </div>
-    </Styled>
+      </Styled>
+    </ReactSidebar>
   );
 };
 
