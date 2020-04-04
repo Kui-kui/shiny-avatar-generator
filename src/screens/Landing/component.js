@@ -24,8 +24,9 @@ const Landing = () => {
   const [colors, setColors] = useState(initialColors);
   const [isDownloading, setIsDownloading] = useState(false);
 
-  const onColorChange = useCallback((key) => ({ hex }) =>
-    setColors({ ...colors, [key]: hex }),
+  const onColorChange = useCallback(
+    (key) => ({ hex }) => setColors({ ...colors, [key]: hex }),
+    [colors],
   );
 
   const downloadAvatar = useCallback(async () => {

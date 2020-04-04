@@ -1,18 +1,33 @@
-import React from 'react';
+import React, { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 
 import ColorOption from '../ColorOption';
+import SkinColorOption from '../SkinColorOption';
+import Separator from '../core/Separator';
 import Styled from './styles';
 
 const Sidebar = ({ colors, onChange }) => {
+  const [toggledOption, setToggledOption] = useState('');
+  const toggle = useCallback(
+    (option) => {
+      if (option === toggledOption) {
+        setToggledOption('');
+      } else {
+        setToggledOption(option);
+      }
+    },
+    [toggledOption, setToggledOption],
+  );
   return (
     <Styled>
       <p className="headline">Shiny Avatar Generator</p>
-      <ColorOption
+      <SkinColorOption
         color={colors.body}
-        label="Body color"
+        isOpen={toggledOption === 'SKIN'}
         onChange={onChange('body')}
+        toggle={() => toggle('SKIN')}
       />
+      <Separator />
       <ColorOption
         color={colors.clothes}
         label="Clothes color"

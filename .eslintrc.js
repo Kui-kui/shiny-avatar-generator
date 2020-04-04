@@ -22,6 +22,7 @@ module.exports = {
         trailingComma: 'all',
       },
     ],
+    'import/prefer-default-export': 0,
     'react/jsx-filename-extension': 0,
     'react/jsx-sort-default-props': 2,
     'react/jsx-sort-props': 2,
