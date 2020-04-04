@@ -15,7 +15,7 @@ const CLOTHES_COLORS = [
   '#A8BAFF',
 ];
 
-const ClothesColorOption = ({ color, onChange, isOpen, toggle }) => {
+const ClothesColorOption = ({ color, onColorChange, isOpen, toggle }) => {
   return (
     <Styled isOpen={isOpen}>
       <Dropdown
@@ -27,7 +27,7 @@ const ClothesColorOption = ({ color, onChange, isOpen, toggle }) => {
         <CirclePicker
           colors={CLOTHES_COLORS}
           hex={color}
-          onChangeComplete={onChange}
+          onChangeComplete={onColorChange}
           styles={pickerStyle}
           width={196}
         />
@@ -39,7 +39,7 @@ const ClothesColorOption = ({ color, onChange, isOpen, toggle }) => {
 ClothesColorOption.propTypes = {
   color: PropTypes.string.isRequired,
   isOpen: PropTypes.bool.isRequired,
-  onChange: PropTypes.func.isRequired,
+  onColorChange: PropTypes.func.isRequired,
   toggle: PropTypes.func.isRequired,
 };
 

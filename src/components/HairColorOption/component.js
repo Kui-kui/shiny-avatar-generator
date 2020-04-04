@@ -7,7 +7,7 @@ import Styled, { pickerStyle } from './styles';
 
 const HAIR_COLORS = ['#FFD947', '#F0C014', '#FFA238', '#C26604', '#17294D'];
 
-const HairColorOption = ({ color, onChange, isOpen, toggle }) => {
+const HairColorOption = ({ color, onColorChange, isOpen, toggle }) => {
   return (
     <Styled isOpen={isOpen}>
       <Dropdown
@@ -19,7 +19,7 @@ const HairColorOption = ({ color, onChange, isOpen, toggle }) => {
         <CirclePicker
           colors={HAIR_COLORS}
           hex={color}
-          onChangeComplete={onChange}
+          onChangeComplete={onColorChange}
           styles={pickerStyle}
           width={196}
         />
@@ -31,7 +31,7 @@ const HairColorOption = ({ color, onChange, isOpen, toggle }) => {
 HairColorOption.propTypes = {
   color: PropTypes.string.isRequired,
   isOpen: PropTypes.bool.isRequired,
-  onChange: PropTypes.func.isRequired,
+  onColorChange: PropTypes.func.isRequired,
   toggle: PropTypes.func.isRequired,
 };
 

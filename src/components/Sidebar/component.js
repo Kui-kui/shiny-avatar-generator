@@ -7,7 +7,7 @@ import SkinColorOption from '../SkinColorOption';
 import Separator from '../core/Separator';
 import Styled from './styles';
 
-const Sidebar = ({ colors, onChange }) => {
+const Sidebar = ({ colors, onColorChange }) => {
   const [toggledOption, setToggledOption] = useState('');
   const toggle = useCallback(
     (option) => {
@@ -25,21 +25,21 @@ const Sidebar = ({ colors, onChange }) => {
       <SkinColorOption
         color={colors.body}
         isOpen={toggledOption === 'SKIN'}
-        onChange={onChange('body')}
+        onColorChange={onColorChange('body')}
         toggle={() => toggle('SKIN')}
       />
       <Separator />
       <ClothesColorOption
         color={colors.body}
         isOpen={toggledOption === 'CLOTHES'}
-        onChange={onChange('clothes')}
+        onColorChange={onColorChange('clothes')}
         toggle={() => toggle('CLOTHES')}
       />
       <Separator />
       <HairColorOption
         color={colors.body}
         isOpen={toggledOption === 'HAIR'}
-        onChange={onChange('hair')}
+        onColorChange={onColorChange('hair')}
         toggle={() => toggle('HAIR')}
       />
     </Styled>
@@ -52,7 +52,7 @@ Sidebar.propTypes = {
     clothes: PropTypes.string.isRequired,
     hair: PropTypes.string.isRequired,
   }).isRequired,
-  onChange: PropTypes.func.isRequired,
+  onColorChange: PropTypes.func.isRequired,
 };
 
 export default Sidebar;

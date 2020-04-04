@@ -45,7 +45,7 @@ const Landing = () => {
   return (
     <ReactSidebar
       docked
-      sidebar={<Sidebar colors={colors} onChange={onColorChange} />}
+      sidebar={<Sidebar colors={colors} onColorChange={onColorChange} />}
     >
       <Styled height={height}>
         <div className="root">

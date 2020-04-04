@@ -7,7 +7,7 @@ import Styled, { pickerStyle } from './styles';
 
 const SKIN_COLORS = ['#FFE9D0', '#F7D2A7', '#C26604'];
 
-const SkinColorOption = ({ color, onChange, isOpen, toggle }) => {
+const SkinColorOption = ({ color, onColorChange, isOpen, toggle }) => {
   return (
     <Styled isOpen={isOpen}>
       <Dropdown
@@ -19,7 +19,7 @@ const SkinColorOption = ({ color, onChange, isOpen, toggle }) => {
         <CirclePicker
           colors={SKIN_COLORS}
           hex={color}
-          onChangeComplete={onChange}
+          onChangeComplete={onColorChange}
           styles={pickerStyle}
           width={196}
         />
@@ -31,7 +31,7 @@ const SkinColorOption = ({ color, onChange, isOpen, toggle }) => {
 SkinColorOption.propTypes = {
   color: PropTypes.string.isRequired,
   isOpen: PropTypes.bool.isRequired,
-  onChange: PropTypes.func.isRequired,
+  onColorChange: PropTypes.func.isRequired,
   toggle: PropTypes.func.isRequired,
 };
 
