@@ -5,5 +5,6 @@ export default styled.div`
     left: 113px;
     position: absolute;
     top: 50px;
+    z-index: 2;
   }
 `;

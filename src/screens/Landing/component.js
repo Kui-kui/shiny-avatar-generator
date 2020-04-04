@@ -22,6 +22,7 @@ const Landing = () => {
   const { height } = useWindowSize();
 
   const [colors, setColors] = useState(initialColors);
+  const [haircut, setHaircut] = useState(0);
   const [isDownloading, setIsDownloading] = useState(false);
 
   const onColorChange = useCallback(
@@ -45,7 +46,14 @@ const Landing = () => {
   return (
     <ReactSidebar
       docked
-      sidebar={<Sidebar colors={colors} onColorChange={onColorChange} />}
+      sidebar={
+        <Sidebar
+          colors={colors}
+          haircut={haircut}
+          onColorChange={onColorChange}
+          setHaircut={setHaircut}
+        />
+      }
     >
       <Styled height={height}>
         <div className="root">
@@ -54,7 +62,7 @@ const Landing = () => {
               <div className="avatar" id="avatar">
                 <Clothes color={colors.clothes} />
                 <Body color={colors.body} />
-                <Hair color={colors.hair} />
+                <Hair color={colors.hair} haircut={haircut} />
               </div>
             </div>
             <Button
