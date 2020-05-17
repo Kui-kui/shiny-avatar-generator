@@ -13,7 +13,7 @@ const SkinColorOption = ({ color, onColorChange, isOpen, toggle }) => {
       <Dropdown
         className="picker"
         isOpen={isOpen}
-        label="Skin color"
+        label="1. Skin color"
         toggle={toggle}
       >
         <CirclePicker

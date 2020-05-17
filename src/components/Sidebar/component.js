@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import ClothesColorOption from '../ClothesColorOption';
 import HairColorOption from '../HairColorOption';
+import HaircutOption from '../HaircutOption';
 import SkinColorOption from '../SkinColorOption';
 import Separator from '../core/Separator';
 import Styled from './styles';
@@ -24,25 +25,30 @@ const Sidebar = ({ colors, haircut, onColorChange, setHaircut }) => {
       <p className="headline">Shiny Avatar Generator</p>
       <SkinColorOption
         color={colors.body}
-        isOpen={toggledOption === 'SKIN'}
+        isOpen={toggledOption === 'SKIN_COLOR'}
         onColorChange={onColorChange('body')}
-        toggle={() => toggle('SKIN')}
+        toggle={() => toggle('SKIN_COLOR')}
       />
       <Separator />
-      <ClothesColorOption
-        color={colors.body}
-        isOpen={toggledOption === 'CLOTHES'}
-        onColorChange={onColorChange('clothes')}
-        toggle={() => toggle('CLOTHES')}
+      <HaircutOption
+        haircut={haircut}
+        isOpen={toggledOption === 'HAIRCUT'}
+        setHaircut={setHaircut}
+        toggle={() => toggle('HAIRCUT')}
       />
       <Separator />
       <HairColorOption
         color={colors.body}
-        haircut={haircut}
-        isOpen={toggledOption === 'HAIR'}
+        isOpen={toggledOption === 'HAIR_COLOR'}
         onColorChange={onColorChange('hair')}
-        setHaircut={setHaircut}
-        toggle={() => toggle('HAIR')}
+        toggle={() => toggle('HAIR_COLOR')}
+      />
+      <Separator />
+      <ClothesColorOption
+        color={colors.body}
+        isOpen={toggledOption === 'CLOTHES_COLOR'}
+        onColorChange={onColorChange('clothes')}
+        toggle={() => toggle('CLOTHES_COLOR')}
       />
     </Styled>
   );

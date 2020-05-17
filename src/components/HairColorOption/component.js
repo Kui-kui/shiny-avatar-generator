@@ -7,21 +7,13 @@ import Styled, { pickerStyle } from './styles';
 
 const HAIR_COLORS = ['#FFD947', '#F0C014', '#C26604', '#17294D'];
 
-const HAIRCUTS = [0, 1, 2];
-
-const HairColorOption = ({
-  color,
-  onColorChange,
-  isOpen,
-  setHaircut,
-  toggle,
-}) => {
+const HairColorOption = ({ color, onColorChange, isOpen, toggle }) => {
   return (
     <Styled isOpen={isOpen}>
       <Dropdown
         className="picker"
         isOpen={isOpen}
-        label="Hair color"
+        label="3. Hair color"
         toggle={toggle}
       >
         <CirclePicker
@@ -31,17 +23,6 @@ const HairColorOption = ({
           styles={pickerStyle}
           width={196}
         />
-        <div>
-          {HAIRCUTS.map((haircut) => (
-            <div
-              key={haircut}
-              className="haricutOption"
-              onClick={() => setHaircut(haircut)}
-            >
-              <p>{`Haircut n°${haircut}`}</p>
-            </div>
-          ))}
-        </div>
       </Dropdown>
     </Styled>
   );
@@ -51,7 +32,6 @@ HairColorOption.propTypes = {
   color: PropTypes.string.isRequired,
   isOpen: PropTypes.bool.isRequired,
   onColorChange: PropTypes.func.isRequired,
-  setHaircut: PropTypes.func.isRequired,
   toggle: PropTypes.func.isRequired,
 };
 

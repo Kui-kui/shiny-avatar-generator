@@ -21,7 +21,7 @@ const ClothesColorOption = ({ color, onColorChange, isOpen, toggle }) => {
       <Dropdown
         className="picker"
         isOpen={isOpen}
-        label="Clothes color"
+        label="5. Clothes color"
         toggle={toggle}
       >
         <CirclePicker
