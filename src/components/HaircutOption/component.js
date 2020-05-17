@@ -4,7 +4,17 @@ import React from 'react';
 import Dropdown from '../core/Dropdown';
 import Styled from './styles';
 
-const HAIRCUTS = [0, 1, 2];
+const HAIRCUTS = [
+  'BOB_CUT_WITH_BANGS',
+  'MEDIUM_TO_LONG',
+  'CURLY',
+  'LONG_AND_WAVY',
+  'LONG_AND_STRAIGHT',
+  'BOB_CUT',
+  'BUN',
+  'PONYTAIL',
+  'LONG_AND_VOLUMINOUS',
+];
 
 const HairColorOption = ({ isOpen, setHaircut, toggle }) => {
   return (
@@ -21,7 +31,7 @@ const HairColorOption = ({ isOpen, setHaircut, toggle }) => {
             className="haricutOption"
             onClick={() => setHaircut(haircut)}
           >
-            <p>{`Haircut n°${haircut}`}</p>
+            <p>{haircut}</p>
           </div>
         ))}
       </Dropdown>

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import Styled from './styles';
 
-const Hair0 = ({ color }) => (
+const BobCutWithBangs = ({ color }) => (
   <Styled>
     <svg
       className="hair"
@@ -27,8 +27,8 @@ const Hair0 = ({ color }) => (
   </Styled>
 );
 
-Hair0.propTypes = {
+BobCutWithBangs.propTypes = {
   color: PropTypes.string.isRequired,
 };
 
-export default Hair0;
+export default BobCutWithBangs;

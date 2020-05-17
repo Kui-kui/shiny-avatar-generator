@@ -1,19 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Hair0 from './Hair0';
-import Hair1 from './Hair1';
-import Hair2 from './Hair2';
+import BobCut from './BobCut';
+import BobCutWithBangs from './BobCutWithBangs';
+import LongAndVoluminous from './LongAndVoluminous';
 
 const Hair = ({ color, haircut }) => {
   switch (haircut) {
-    case 2:
-      return <Hair2 color={color} />;
-    case 1:
-      return <Hair1 color={color} />;
-    case 0:
+    case 'LONG_AND_VOLUMINOUS':
+      return <LongAndVoluminous color={color} />;
+    case 'BOB_CUT':
+      return <BobCut color={color} />;
+    case 'BOB_CUT_WITH_BANGS':
     default:
-      return <Hair0 color={color} />;
+      return <BobCutWithBangs color={color} />;
   }
 };
 

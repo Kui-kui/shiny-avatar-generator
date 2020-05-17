@@ -4,7 +4,7 @@ import React from 'react';
 
 import Styled from './styles';
 
-const Hair1 = ({ color }) => {
+const LongAndVoluminous = ({ color }) => {
   const shadowColor = Color(color).darken(0.3).hex();
   return (
     <Styled>
@@ -51,8 +51,8 @@ const Hair1 = ({ color }) => {
   );
 };
 
-Hair1.propTypes = {
+LongAndVoluminous.propTypes = {
   color: PropTypes.string.isRequired,
 };
 
-export default Hair1;
+export default LongAndVoluminous;
