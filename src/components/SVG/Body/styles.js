@@ -5,7 +5,7 @@ export default styled.div`
     left: 135px;
     position: absolute;
     top: 65px;
-    z-index: 1;
+    z-index: 2;
   }
 
   .neck {

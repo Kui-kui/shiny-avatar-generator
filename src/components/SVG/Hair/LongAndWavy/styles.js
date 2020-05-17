@@ -1,24 +1,17 @@
 import styled from 'styled-components';
 
 export default styled.div`
-  .hair_left {
-    left: 113px;
+  .hair {
+    left: 85px;
     position: absolute;
     top: 55px;
     z-index: 2;
   }
 
-  .hair_right {
-    right: 116px;
-    position: absolute;
-    top: 96px;
-    z-index: 1;
-  }
-
   .hair_shadow {
-    right: 130px;
+    right: 133px;
     position: absolute;
-    top: 173px;
+    top: 174px;
     z-index: 0;
   }
 `;

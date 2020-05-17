@@ -62,7 +62,11 @@ const Landing = () => {
               <div className="avatar" id="avatar">
                 <Clothes color={colors.clothes} />
                 <Body color={colors.body} />
-                <Hair color={colors.hair} haircut={haircut} />
+                <Hair
+                  clothesColor={colors.clothes}
+                  color={colors.hair}
+                  haircut={haircut}
+                />
               </div>
             </div>
             <Button
