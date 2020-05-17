@@ -13,6 +13,7 @@ export default styled.div`
 export const pickerStyle = {
   default: {
     card: {
+      justifyContent: 'center',
       marginBottom: 0,
     },
   },
