@@ -6,13 +6,13 @@ import Dropdown from '../core/Dropdown';
 import Styled, { pickerStyle } from './styles';
 
 const CLOTHES_COLORS = [
-  '#A8DEFF',
-  '#99FBE6',
-  '#FFEB9F',
-  '#FFD39F',
-  '#FBB59D',
+  '#FFD947',
   '#DAB0FF',
-  '#A8BAFF',
+  '#FEA99A',
+  '#A2C7FF',
+  '#458FFF',
+  '#4B5FFA',
+  '#17294C',
 ];
 
 const ClothesColorOption = ({ color, onColorChange, isOpen, toggle }) => {

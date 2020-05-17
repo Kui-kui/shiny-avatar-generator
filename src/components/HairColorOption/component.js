@@ -5,7 +5,7 @@ import { CirclePicker } from 'react-color';
 import Dropdown from '../core/Dropdown';
 import Styled, { pickerStyle } from './styles';
 
-const HAIR_COLORS = ['#FFD947', '#F0C014', '#FFA238', '#C26604', '#17294D'];
+const HAIR_COLORS = ['#FFD947', '#F0C014', '#C26604', '#17294D'];
 
 const HAIRCUTS = [0, 1, 2];
 
