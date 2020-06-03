@@ -25,14 +25,9 @@ const LongAndVoluminous = ({ color }) => {
           fill={color}
         />
       </svg>
-      <svg
-        className="hair_shadow"
-        height="105"
-        viewBox="0 0 124 105"
-        width="124"
-      >
+      <svg className="hair_shadow" height="86" viewBox="0 0 124 86" width="124">
         <path
-          d="M0 58.1749L7 23.6749L85.5 0.174896L123.5 23.6749V85.6749L74.5 104.175L7 85.6749L0 58.1749Z"
+          d="M0 58.5001L7 24.0001L85.5 0.500122L123.5 24.0001V86.0001L97 72.5L7 66.5L0 58.5001Z"
           fill={shadowColor}
         />
       </svg>

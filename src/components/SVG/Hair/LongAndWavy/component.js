@@ -18,14 +18,9 @@ const LongAndWavy = ({ color }) => {
           fill={color}
         />
       </svg>
-      <svg
-        className="hair_shadow"
-        height="105"
-        viewBox="0 0 124 105"
-        width="124"
-      >
+      <svg className="hair_shadow" height="86" viewBox="0 0 124 86" width="124">
         <path
-          d="M0 58.5001L7 24.0001L85.5 0.500122L123.5 24.0001V86.0001L74.5 104.5L7 86.0001L0 58.5001Z"
+          d="M-6.10352e-05 58.5L6.99994 24L85.4999 0.5L123.5 24V86L85.4999 71.5L9.5 68L-6.10352e-05 58.5Z"
           fill={shadowColor}
         />
       </svg>

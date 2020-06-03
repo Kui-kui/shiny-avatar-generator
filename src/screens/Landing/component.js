@@ -22,7 +22,7 @@ const Landing = () => {
   const { height } = useWindowSize();
 
   const [colors, setColors] = useState(initialColors);
-  const [clothes, setClothes] = useState('SWEATER');
+  const [clothes, setClothes] = useState('CARDIGAN');
   const [haircut, setHaircut] = useState('BOB_CUT_WITH_BANGS');
   const [isDownloading, setIsDownloading] = useState(false);
 
