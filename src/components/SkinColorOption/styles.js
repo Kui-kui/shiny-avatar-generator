@@ -15,6 +15,7 @@ export const pickerStyle = {
     card: {
       justifyContent: 'center',
       marginBottom: 0,
+      marginLeft: 8,
     },
   },
 };
