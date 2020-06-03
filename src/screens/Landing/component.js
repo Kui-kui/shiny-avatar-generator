@@ -22,6 +22,7 @@ const Landing = () => {
   const { height } = useWindowSize();
 
   const [colors, setColors] = useState(initialColors);
+  const [clothes, setClothes] = useState('SWEATER');
   const [haircut, setHaircut] = useState('BOB_CUT_WITH_BANGS');
   const [isDownloading, setIsDownloading] = useState(false);
 
@@ -48,9 +49,11 @@ const Landing = () => {
       docked
       sidebar={
         <Sidebar
+          clothes={clothes}
           colors={colors}
           haircut={haircut}
           onColorChange={onColorChange}
+          setClothes={setClothes}
           setHaircut={setHaircut}
         />
       }

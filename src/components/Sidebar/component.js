@@ -2,13 +2,21 @@ import React, { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 
 import ClothesColorOption from '../ClothesColorOption';
+import ClothesOption from '../ClothesOption';
 import HairColorOption from '../HairColorOption';
 import HaircutOption from '../HaircutOption';
 import SkinColorOption from '../SkinColorOption';
 import Separator from '../core/Separator';
 import Styled from './styles';
 
-const Sidebar = ({ colors, haircut, onColorChange, setHaircut }) => {
+const Sidebar = ({
+  clothes,
+  colors,
+  haircut,
+  onColorChange,
+  setClothes,
+  setHaircut,
+}) => {
   const [toggledOption, setToggledOption] = useState('');
   const toggle = useCallback(
     (option) => {
@@ -44,6 +52,13 @@ const Sidebar = ({ colors, haircut, onColorChange, setHaircut }) => {
         toggle={() => toggle('HAIR_COLOR')}
       />
       <Separator />
+      <ClothesOption
+        clothes={clothes}
+        isOpen={toggledOption === 'CLOTHES'}
+        setClothes={setClothes}
+        toggle={() => toggle('CLOTHES')}
+      />
+      <Separator />
       <ClothesColorOption
         color={colors.body}
         isOpen={toggledOption === 'CLOTHES_COLOR'}
@@ -60,8 +75,10 @@ Sidebar.propTypes = {
     clothes: PropTypes.string.isRequired,
     hair: PropTypes.string.isRequired,
   }).isRequired,
+  clothes: PropTypes.string.isRequired,
   haircut: PropTypes.string.isRequired,
   onColorChange: PropTypes.func.isRequired,
+  setClothes: PropTypes.func.isRequired,
   setHaircut: PropTypes.func.isRequired,
 };
 
