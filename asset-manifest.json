@@ -1,22 +1,29 @@
 {
   "files": {
-    "main.css": "/shiny-avatar-generator/static/css/main.bb41a4d0.chunk.css",
-    "main.js": "/shiny-avatar-generator/static/js/main.cd3110ee.chunk.js",
-    "main.js.map": "/shiny-avatar-generator/static/js/main.cd3110ee.chunk.js.map",
+    "main.css": "/shiny-avatar-generator/static/css/main.de5683c8.chunk.css",
+    "main.js": "/shiny-avatar-generator/static/js/main.42d581e0.chunk.js",
+    "main.js.map": "/shiny-avatar-generator/static/js/main.42d581e0.chunk.js.map",
     "runtime-main.js": "/shiny-avatar-generator/static/js/runtime-main.6632f443.js",
     "runtime-main.js.map": "/shiny-avatar-generator/static/js/runtime-main.6632f443.js.map",
-    "static/js/2.b2391624.chunk.js": "/shiny-avatar-generator/static/js/2.b2391624.chunk.js",
-    "static/js/2.b2391624.chunk.js.map": "/shiny-avatar-generator/static/js/2.b2391624.chunk.js.map",
+    "static/js/2.3b9cdc5a.chunk.js": "/shiny-avatar-generator/static/js/2.3b9cdc5a.chunk.js",
+    "static/js/2.3b9cdc5a.chunk.js.map": "/shiny-avatar-generator/static/js/2.3b9cdc5a.chunk.js.map",
     "index.html": "/shiny-avatar-generator/index.html",
-    "precache-manifest.0ffedfae9649f20ed00ee2ec86722897.js": "/shiny-avatar-generator/precache-manifest.0ffedfae9649f20ed00ee2ec86722897.js",
+    "precache-manifest.9fa221d75d829a85ab8cff6dcec72f28.js": "/shiny-avatar-generator/precache-manifest.9fa221d75d829a85ab8cff6dcec72f28.js",
     "service-worker.js": "/shiny-avatar-generator/service-worker.js",
-    "static/css/main.bb41a4d0.chunk.css.map": "/shiny-avatar-generator/static/css/main.bb41a4d0.chunk.css.map",
-    "static/js/2.b2391624.chunk.js.LICENSE.txt": "/shiny-avatar-generator/static/js/2.b2391624.chunk.js.LICENSE.txt"
+    "static/css/main.de5683c8.chunk.css.map": "/shiny-avatar-generator/static/css/main.de5683c8.chunk.css.map",
+    "static/js/2.3b9cdc5a.chunk.js.LICENSE.txt": "/shiny-avatar-generator/static/js/2.3b9cdc5a.chunk.js.LICENSE.txt",
+    "static/media/CARDIGAN.png": "/shiny-avatar-generator/static/media/CARDIGAN.2413a19f.png",
+    "static/media/FLOWERY_TEE.png": "/shiny-avatar-generator/static/media/FLOWERY_TEE.ed5e99fe.png",
+    "static/media/JACKET.png": "/shiny-avatar-generator/static/media/JACKET.d5adc477.png",
+    "static/media/STRIPED_JERSEY.png": "/shiny-avatar-generator/static/media/STRIPED_JERSEY.bd7e4405.png",
+    "static/media/SWEATER.png": "/shiny-avatar-generator/static/media/SWEATER.23607e2a.png",
+    "static/media/TANK_TOP.png": "/shiny-avatar-generator/static/media/TANK_TOP.94e1b754.png",
+    "static/media/TEE.png": "/shiny-avatar-generator/static/media/TEE.e902efc7.png"
   },
   "entrypoints": [
     "static/js/runtime-main.6632f443.js",
-    "static/js/2.b2391624.chunk.js",
-    "static/css/main.bb41a4d0.chunk.css",
-    "static/js/main.cd3110ee.chunk.js"
+    "static/js/2.3b9cdc5a.chunk.js",
+    "static/css/main.de5683c8.chunk.css",
+    "static/js/main.42d581e0.chunk.js"
   ]
 }
