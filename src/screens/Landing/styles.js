@@ -9,8 +9,9 @@ export default styled.div`
   }
 
   .button {
-    position: absolute;
+    border: 0;
     bottom: 40px;
+    position: absolute;
   }
 
   .body {
