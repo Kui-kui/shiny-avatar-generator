@@ -63,8 +63,8 @@ const Landing = () => {
           <div className="body">
             <div className="preview">
               <div className="avatar" id="avatar">
-                <Clothes color={colors.clothes} />
                 <Body color={colors.body} />
+                <Clothes clothes={clothes} color={colors.clothes} />
                 <Hair
                   clothesColor={colors.clothes}
                   color={colors.hair}
