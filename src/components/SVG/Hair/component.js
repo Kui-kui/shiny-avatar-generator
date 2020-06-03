@@ -36,7 +36,7 @@ const Hair = ({ clothesColor, color, haircut }) => {
 Hair.propTypes = {
   clothesColor: PropTypes.string.isRequired,
   color: PropTypes.string.isRequired,
-  haircut: PropTypes.number.isRequired,
+  haircut: PropTypes.string.isRequired,
 };
 
 export default Hair;
