@@ -75,7 +75,7 @@ const Landing = () => {
                   </MorphReplace>
                 </div>
                 <div className="svgContainer">
-                  <MorphReplace height={400} rotation="clockwise" width={400}>
+                  <MorphReplace height={400} rotation="none" width={400}>
                     <Hair
                       key={`${haircut}_${colors.hair}`}
                       clothesColor={colors.clothes}
