@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8ab32d875bf35364696fb063a84a13fd",
+    "revision": "32dcb5fa826dede747fe238af266774e",
     "url": "/shiny-avatar-generator/index.html"
   },
   {
-    "revision": "f505c62ad700795ca8c5",
+    "revision": "e5f2fc7d6503441c36a7",
     "url": "/shiny-avatar-generator/static/css/main.de5683c8.chunk.css"
   },
   {
-    "revision": "648861ae5dd7016fe64d",
-    "url": "/shiny-avatar-generator/static/js/2.f1c48d62.chunk.js"
+    "revision": "8d88e7d96978dc01faad",
+    "url": "/shiny-avatar-generator/static/js/2.eeda3290.chunk.js"
   },
   {
-    "revision": "3453b8997016469371284a28c0e873e2",
-    "url": "/shiny-avatar-generator/static/js/2.f1c48d62.chunk.js.LICENSE.txt"
+    "revision": "c64c486544348f10a6d6c716950bc223",
+    "url": "/shiny-avatar-generator/static/js/2.eeda3290.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f505c62ad700795ca8c5",
-    "url": "/shiny-avatar-generator/static/js/main.379a3311.chunk.js"
+    "revision": "e5f2fc7d6503441c36a7",
+    "url": "/shiny-avatar-generator/static/js/main.50957306.chunk.js"
   },
   {
     "revision": "a0157c747dd173c3b93e",
