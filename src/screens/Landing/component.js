@@ -3,6 +3,7 @@ import domtoimage from 'dom-to-image';
 import FileSaver from 'file-saver';
 import React, { useState, useCallback } from 'react';
 import ReactSidebar from 'react-sidebar';
+import { MorphReplace } from 'react-svg-morph';
 
 import Body from '../../components/SVG/Body';
 import Clothes from '../../components/SVG/Clothes';
@@ -64,12 +65,25 @@ const Landing = () => {
             <div className="preview">
               <div className="avatar" id="avatar">
                 <Body color={colors.body} />
-                <Clothes clothes={clothes} color={colors.clothes} />
-                <Hair
-                  clothesColor={colors.clothes}
-                  color={colors.hair}
-                  haircut={haircut}
-                />
+                <div className="svgContainer">
+                  <MorphReplace height={400} rotation="none" width={400}>
+                    <Clothes
+                      key={`${clothes}_${colors.clothes}`}
+                      clothes={clothes}
+                      color={colors.clothes}
+                    />
+                  </MorphReplace>
+                </div>
+                <div className="svgContainer">
+                  <MorphReplace height={400} rotation="clockwise" width={400}>
+                    <Hair
+                      key={`${haircut}_${colors.hair}`}
+                      clothesColor={colors.clothes}
+                      color={colors.hair}
+                      haircut={haircut}
+                    />
+                  </MorphReplace>
+                </div>
               </div>
             </div>
             <Button

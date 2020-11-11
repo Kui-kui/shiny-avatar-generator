@@ -41,4 +41,9 @@ export default styled.div`
     padding: 0 24px;
     width: 200px;
   }
+
+  .svgContainer {
+    position: absolute;
+    top: 0;
+  }
 `;
