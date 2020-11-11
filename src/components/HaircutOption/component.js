@@ -16,6 +16,7 @@ const HAIRCUT_IDS = [
   'BUN',
   'PONYTAIL',
   'LONG_AND_VOLUMINOUS',
+  'SHORT_BOB_CUT',
 ];
 
 const HairColorOption = ({ isOpen, haircut, setHaircut, toggle }) => {
