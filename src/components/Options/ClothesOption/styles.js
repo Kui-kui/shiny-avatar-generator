@@ -1,19 +1,9 @@
 import styled from 'styled-components';
 
-export default styled.div`
-  margin-bottom: 24px;
-  margin-top: 8px;
-
-  .haircutContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .picker {
-    margin-bottom: ${({ isOpen }) => (isOpen ? '-14px' : '0')};
-    margin-top: 16px;
-  }
+export const Root = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 `;
 
 export const Preview = styled.img`

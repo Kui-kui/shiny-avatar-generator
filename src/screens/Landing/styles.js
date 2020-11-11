@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
 export default styled.div`
+  background-color: #f5fbff;
+  display: flex;
+  min-height: 100vh;
+
   .avatar {
     background-color: #f5fbff;
     height: 400px;
@@ -8,38 +12,22 @@ export default styled.div`
     width: 400px;
   }
 
-  .button {
-    border: 0;
-    bottom: 40px;
-    position: absolute;
-  }
-
   .body {
     align-items: center;
     display: flex;
-    flex: 1;
     flex-direction: column;
+    flex: 1;
     justify-content: center;
+  }
+
+  .button {
+    border: 0;
+    margin-bottom: 48px;
   }
 
   .preview {
     border: 20px solid white;
-    margin-bottom: 64px;
-  }
-
-  .root {
-    align-items: center;
-    background-color: #f5fbff;
-    display: flex;
-    height: ${({ height }) => `${height}px`};
-  }
-
-  .sidebar {
-    background-color: #f7f8f9;
-    box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.2);
-    height: ${({ height }) => `${height}px`};
-    padding: 0 24px;
-    width: 200px;
+    margin-bottom: 24px;
   }
 
   .svgContainer {

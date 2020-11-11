@@ -2,15 +2,13 @@
 import domtoimage from 'dom-to-image';
 import FileSaver from 'file-saver';
 import React, { useState, useCallback } from 'react';
-import ReactSidebar from 'react-sidebar';
 import { MorphReplace } from 'react-svg-morph';
 
 import Body from '../../components/SVG/Body';
 import Clothes from '../../components/SVG/Clothes';
 import Hair from '../../components/SVG/Hair';
-import useWindowSize from '../../hooks/useWindowSize';
 import Styled from './styles';
-import Sidebar from '../../components/Sidebar/component';
+import Footer from '../../components/Footer';
 import Button from '../../components/core/Button';
 
 const initialColors = {
@@ -20,8 +18,6 @@ const initialColors = {
 };
 
 const Landing = () => {
-  const { height } = useWindowSize();
-
   const [colors, setColors] = useState(initialColors);
   const [clothes, setClothes] = useState('CARDIGAN');
   const [haircut, setHaircut] = useState('BOB_CUT_WITH_BANGS');
@@ -46,56 +42,48 @@ const Landing = () => {
   }, []);
 
   return (
-    <ReactSidebar
-      docked
-      sidebar={
-        <Sidebar
-          clothes={clothes}
-          colors={colors}
-          haircut={haircut}
-          onColorChange={onColorChange}
-          setClothes={setClothes}
-          setHaircut={setHaircut}
-        />
-      }
-    >
-      <Styled height={height}>
-        <div className="root">
-          <div className="body">
-            <div className="preview">
-              <div className="avatar" id="avatar">
-                <Body color={colors.body} />
-                <div className="svgContainer">
-                  <MorphReplace height={400} rotation="none" width={400}>
-                    <Clothes
-                      key={`${clothes}_${colors.clothes}`}
-                      clothes={clothes}
-                      color={colors.clothes}
-                    />
-                  </MorphReplace>
-                </div>
-                <div className="svgContainer">
-                  <MorphReplace height={400} rotation="none" width={400}>
-                    <Hair
-                      key={`${haircut}_${colors.hair}`}
-                      clothesColor={colors.clothes}
-                      color={colors.hair}
-                      haircut={haircut}
-                    />
-                  </MorphReplace>
-                </div>
-              </div>
+    <Styled>
+      <div className="body">
+        <div className="preview">
+          <div className="avatar" id="avatar">
+            <Body color={colors.body} />
+            <div className="svgContainer">
+              <MorphReplace height={400} rotation="none" width={400}>
+                <Clothes
+                  key={`${clothes}_${colors.clothes}`}
+                  clothes={clothes}
+                  color={colors.clothes}
+                />
+              </MorphReplace>
             </div>
-            <Button
-              className="button"
-              label="Télécharger"
-              loading={isDownloading}
-              onClick={downloadAvatar}
-            />
+            <div className="svgContainer">
+              <MorphReplace height={400} rotation="none" width={400}>
+                <Hair
+                  key={`${haircut}_${colors.hair}`}
+                  clothesColor={colors.clothes}
+                  color={colors.hair}
+                  haircut={haircut}
+                />
+              </MorphReplace>
+            </div>
           </div>
         </div>
-      </Styled>
-    </ReactSidebar>
+        <Button
+          className="button"
+          label="Download"
+          loading={isDownloading}
+          onClick={downloadAvatar}
+        />
+      </div>
+      <Footer
+        clothes={clothes}
+        colors={colors}
+        haircut={haircut}
+        onColorChange={onColorChange}
+        setClothes={setClothes}
+        setHaircut={setHaircut}
+      />
+    </Styled>
   );
 };
 
