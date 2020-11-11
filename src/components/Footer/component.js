@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import Options from '../Options';
 import OptionLabel from '../OptionLabel';
-import Styled from './styles';
+import Styled, { OptionContainer } from './styles';
 
 const Footer = ({
   clothes,
@@ -44,19 +44,17 @@ const Footer = ({
       <div className="toggle" onClick={toggleFooter}>
         <p className="toggleChevron">▾</p>
       </div>
-      {toggledOption !== '' ? (
-        <div className="options">
-          <Options
-            clothes={clothes}
-            colors={colors}
-            haircut={haircut}
-            onColorChange={onColorChange}
-            setClothes={setClothes}
-            setHaircut={setHaircut}
-            toggledOption={toggledOption}
-          />
-        </div>
-      ) : null}
+      <OptionContainer isHidden={toggledOption === ''}>
+        <Options
+          clothes={clothes}
+          colors={colors}
+          haircut={haircut}
+          onColorChange={onColorChange}
+          setClothes={setClothes}
+          setHaircut={setHaircut}
+          toggledOption={toggledOption}
+        />
+      </OptionContainer>
       <div className="labels">
         <OptionLabel
           isSelected={toggledOption === 'SKIN_COLOR'}

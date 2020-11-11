@@ -22,12 +22,6 @@ export default styled.div`
   }
 
   .options {
-    display: flex;
-    flex-direction: row;
-    height: 48px;
-    justify-content: center;
-    padding: 24px 0;
-    border-bottom: 1px solid #edeef1;
   }
 
   .toggle {
@@ -53,4 +47,14 @@ export default styled.div`
     transition: 0.5s ease-in-out;
     transform: ${({ isHidden }) => (isHidden ? `rotate(180deg);` : '')};
   }
+`;
+
+export const OptionContainer = styled.div`
+  border-bottom: 1px solid #edeef1;
+  display: flex;
+  flex-direction: row;
+  height: ${({ isHidden }) => (isHidden ? '0' : '104px')};
+  justify-content: center;
+  opacity: ${({ isHidden }) => (isHidden ? '0' : '1')};
+  transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out;
 `;
