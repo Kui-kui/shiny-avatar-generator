@@ -17,6 +17,9 @@ const initialColors = {
   hair: '#FFD947',
 };
 
+const sleep = (duration) =>
+  new Promise((resolve) => setTimeout(resolve, duration));
+
 const Landing = () => {
   const [colors, setColors] = useState(initialColors);
   const [clothes, setClothes] = useState('CARDIGAN');
@@ -31,6 +34,7 @@ const Landing = () => {
   const downloadAvatar = useCallback(async () => {
     setIsDownloading(true);
     try {
+      await sleep(1000);
       const avatar = document.getElementById('avatar');
       const blob = await domtoimage.toBlob(avatar);
       await FileSaver.saveAs(blob, 'avatar.png');
@@ -39,7 +43,7 @@ const Landing = () => {
     } finally {
       setIsDownloading(false);
     }
-  }, []);
+  }, [setIsDownloading]);
 
   return (
     <Styled>
