@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/shiny-avatar-generator/precache-manifest.a42ff2c1d6e12c778269e6b861dd4a04.js"
+  "/shiny-avatar-generator/precache-manifest.6a10fa3602abab69746c326eb1081056.js"
 );
 
 self.addEventListener('message', (event) => {
