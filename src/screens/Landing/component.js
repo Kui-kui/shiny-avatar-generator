@@ -27,7 +27,7 @@ const Landing = () => {
   const [isDownloading, setIsDownloading] = useState(false);
 
   const onColorChange = useCallback(
-    (key) => ({ hex }) => setColors({ ...colors, [key]: hex }),
+    (key) => (hex) => setColors({ ...colors, [key]: hex }),
     [colors],
   );
 

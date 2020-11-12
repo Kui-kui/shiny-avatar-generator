@@ -3,8 +3,9 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
+import Thumbnail from '../../core/Thumbnail';
 
-import { Preview, Root } from './styles';
+import { Root } from './styles';
 
 const HAIRCUT_IDS = [
   'BOB_CUT_WITH_BANGS',
@@ -22,13 +23,12 @@ const HairColorOption = ({ haircut, setHaircut }) => {
   return (
     <Root>
       {HAIRCUT_IDS.map((haircutId) => (
-        <div key={haircutId} onClick={() => setHaircut(haircutId)}>
-          <Preview
-            alt={haircutId}
-            isSelected={haircutId === haircut}
-            src={require(`./assets/${haircutId}.png`)}
-          />
-        </div>
+        <Thumbnail
+          key={haircutId}
+          imgSrc={require(`./assets/${haircutId}.png`)}
+          isSelected={haircutId === haircut}
+          onClick={() => setHaircut(haircutId)}
+        />
       ))}
     </Root>
   );

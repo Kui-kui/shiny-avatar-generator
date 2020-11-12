@@ -1,23 +1,21 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { CirclePicker } from 'react-color';
-import useWindowSize from '../../../hooks/useWindowSize';
+import Thumbnail from '../Thumbnail';
 
-import Styled, { pickerStyle } from './styles';
+import { Root } from './styles';
 
 const ColorPicker = ({ colors, onColorChange, selectedColor }) => {
-  const { width } = useWindowSize();
   return (
-    <Styled>
-      <CirclePicker
-        circleSize={56}
-        colors={colors}
-        hex={selectedColor}
-        onChangeComplete={onColorChange}
-        styles={pickerStyle}
-        width={width}
-      />
-    </Styled>
+    <Root>
+      {colors.map((color) => (
+        <Thumbnail
+          key={color}
+          color={color}
+          isSelected={color === selectedColor}
+          onClick={() => onColorChange(color)}
+        />
+      ))}
+    </Root>
   );
 };
 

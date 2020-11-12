@@ -8,7 +8,7 @@ import HaircutOption from './HaircutOption';
 import SkinColorOption from './SkinColorOption';
 import Styled from './styles';
 
-const OptionLabel = ({
+const Options = ({
   clothes,
   colors,
   haircut,
@@ -68,7 +68,7 @@ const OptionLabel = ({
   return <Styled>{option}</Styled>;
 };
 
-OptionLabel.propTypes = {
+Options.propTypes = {
   clothes: PropTypes.string.isRequired,
   colors: PropTypes.shape({
     body: PropTypes.string.isRequired,
@@ -82,4 +82,4 @@ OptionLabel.propTypes = {
   toggledOption: PropTypes.string.isRequired,
 };
 
-export default OptionLabel;
+export default Options;

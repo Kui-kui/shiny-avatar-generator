@@ -3,8 +3,9 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
+import Thumbnail from '../../core/Thumbnail';
 
-import { Preview, Root } from './styles';
+import { Root } from './styles';
 
 const CLOTHES_IDS = [
   'SWEATER',
@@ -20,13 +21,12 @@ const ClothesOption = ({ clothes, setClothes }) => {
   return (
     <Root>
       {CLOTHES_IDS.map((clothesId) => (
-        <div key={clothesId} onClick={() => setClothes(clothesId)}>
-          <Preview
-            alt={clothesId}
-            isSelected={clothesId === clothes}
-            src={require(`./assets/${clothesId}.png`)}
-          />
-        </div>
+        <Thumbnail
+          key={clothesId}
+          imgSrc={require(`./assets/${clothesId}.png`)}
+          isSelected={clothesId === clothes}
+          onClick={() => setClothes(clothesId)}
+        />
       ))}
     </Root>
   );
