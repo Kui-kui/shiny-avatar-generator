@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/shiny-avatar-generator/static/css/main.de5683c8.chunk.css",
-    "main.js": "/shiny-avatar-generator/static/js/main.56d45300.chunk.js",
-    "main.js.map": "/shiny-avatar-generator/static/js/main.56d45300.chunk.js.map",
+    "main.js": "/shiny-avatar-generator/static/js/main.aec8dc09.chunk.js",
+    "main.js.map": "/shiny-avatar-generator/static/js/main.aec8dc09.chunk.js.map",
     "runtime-main.js": "/shiny-avatar-generator/static/js/runtime-main.6632f443.js",
     "runtime-main.js.map": "/shiny-avatar-generator/static/js/runtime-main.6632f443.js.map",
     "static/js/2.a79626d3.chunk.js": "/shiny-avatar-generator/static/js/2.a79626d3.chunk.js",
     "static/js/2.a79626d3.chunk.js.map": "/shiny-avatar-generator/static/js/2.a79626d3.chunk.js.map",
     "index.html": "/shiny-avatar-generator/index.html",
-    "precache-manifest.6a10fa3602abab69746c326eb1081056.js": "/shiny-avatar-generator/precache-manifest.6a10fa3602abab69746c326eb1081056.js",
+    "precache-manifest.8140b9acc33067fec31064dd8b074cd7.js": "/shiny-avatar-generator/precache-manifest.8140b9acc33067fec31064dd8b074cd7.js",
     "service-worker.js": "/shiny-avatar-generator/service-worker.js",
     "static/css/main.de5683c8.chunk.css.map": "/shiny-avatar-generator/static/css/main.de5683c8.chunk.css.map",
     "static/js/2.a79626d3.chunk.js.LICENSE.txt": "/shiny-avatar-generator/static/js/2.a79626d3.chunk.js.LICENSE.txt",
@@ -24,6 +24,6 @@
     "static/js/runtime-main.6632f443.js",
     "static/js/2.a79626d3.chunk.js",
     "static/css/main.de5683c8.chunk.css",
-    "static/js/main.56d45300.chunk.js"
+    "static/js/main.aec8dc09.chunk.js"
   ]
 }

@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5717db8a2b8b3436fb25f27217ded463",
+    "revision": "b101558e5d506e2b866bed5e873492c9",
     "url": "/shiny-avatar-generator/index.html"
   },
   {
-    "revision": "7c76c74d154afa02521e",
+    "revision": "3be34e6b7e79ef9b4b02",
     "url": "/shiny-avatar-generator/static/css/main.de5683c8.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/shiny-avatar-generator/static/js/2.a79626d3.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7c76c74d154afa02521e",
-    "url": "/shiny-avatar-generator/static/js/main.56d45300.chunk.js"
+    "revision": "3be34e6b7e79ef9b4b02",
+    "url": "/shiny-avatar-generator/static/js/main.aec8dc09.chunk.js"
   },
   {
     "revision": "a0157c747dd173c3b93e",
