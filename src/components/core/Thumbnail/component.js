@@ -1,13 +1,18 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import { Color, Image, Root } from './styles';
+import { Color, Image } from './styles';
 
 const Thumbnail = ({ isSelected, onClick, imgSrc, color }) => {
-  return (
-    <Root backgroundColor={color} isSelected={isSelected} onClick={onClick}>
-      {color ? <Color color={color} /> : <Image alt={imgSrc} src={imgSrc} />}
-    </Root>
+  return color ? (
+    <Color color={color} isSelected={isSelected} onClick={onClick} />
+  ) : (
+    <Image
+      alt={imgSrc}
+      isSelected={isSelected}
+      onClick={onClick}
+      src={imgSrc}
+    />
   );
 };
 
