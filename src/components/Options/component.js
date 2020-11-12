@@ -1,12 +1,16 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import ColorPicker from '../core/ColorPicker';
+import ImagePicker from '../core/ImagePicker/component';
 
-import ClothesColorOption from './ClothesColorOption';
-import ClothesOption from './ClothesOption';
-import HairColorOption from './HairColorOption';
-import HaircutOption from './HaircutOption';
-import SkinColorOption from './SkinColorOption';
 import Styled from './styles';
+import {
+  CLOTHES_COLORS,
+  CLOTHES_IDS,
+  HAIRCUT_IDS,
+  HAIR_COLORS,
+  SKIN_COLORS,
+} from './utils';
 
 const Options = ({
   clothes,
@@ -21,42 +25,44 @@ const Options = ({
     switch (toggledOption) {
       case 'SKIN_COLOR':
         return (
-          <SkinColorOption
-            color={colors.body}
-            isOpen={toggledOption === 'SKIN_COLOR'}
+          <ColorPicker
+            colors={SKIN_COLORS}
             onColorChange={onColorChange('body')}
+            selectedColor={colors.body}
           />
         );
       case 'HAIRCUT':
         return (
-          <HaircutOption
-            haircut={haircut}
-            isOpen={toggledOption === 'HAIRCUT'}
-            setHaircut={setHaircut}
+          <ImagePicker
+            images={HAIRCUT_IDS}
+            onClick={setHaircut}
+            pathPrefix="haircut"
+            selectedImage={haircut}
           />
         );
       case 'HAIR_COLOR':
         return (
-          <HairColorOption
-            color={colors.body}
-            isOpen={toggledOption === 'HAIR_COLOR'}
+          <ColorPicker
+            colors={HAIR_COLORS}
             onColorChange={onColorChange('hair')}
+            selectedColor={colors.hair}
           />
         );
       case 'CLOTHES':
         return (
-          <ClothesOption
-            clothes={clothes}
-            isOpen={toggledOption === 'CLOTHES'}
-            setClothes={setClothes}
+          <ImagePicker
+            images={CLOTHES_IDS}
+            onClick={setClothes}
+            pathPrefix="clothes"
+            selectedImage={clothes}
           />
         );
       case 'CLOTHES_COLOR':
         return (
-          <ClothesColorOption
-            color={colors.body}
-            isOpen={toggledOption === 'CLOTHES_COLOR'}
+          <ColorPicker
+            colors={CLOTHES_COLORS}
             onColorChange={onColorChange('clothes')}
+            selectedColor={colors.clothes}
           />
         );
       default:
