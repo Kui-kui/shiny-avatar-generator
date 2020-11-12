@@ -5,23 +5,21 @@ export default styled.div`
   bottom: 0;
   filter: drop-shadow(0 0mm 5mm rgba(0, 0, 0, 0.1));
   flex-direction: column;
+  left: 0;
   position: fixed;
+  right: 0;
   transform: translate(
     0,
     ${({ isHidden, footerHeight }) => (isHidden ? footerHeight : 0)}px
   );
   transition: 0.5s ease-in-out;
-  width: 100vw;
 
   .labels {
-    display: flex;
+    display: -webkit-box;
     flex-direction: row;
     justify-content: center;
-    overflow-x: auto;
-    padding: 24px 0;
-  }
-
-  .options {
+    overflow: auto;
+    white-space: nowrap;
   }
 
   .toggle {
@@ -51,10 +49,13 @@ export default styled.div`
 
 export const OptionContainer = styled.div`
   border-bottom: 1px solid #edeef1;
-  display: flex;
+  display: -webkit-box;
   flex-direction: row;
   height: ${({ isHidden }) => (isHidden ? '0' : '104px')};
   justify-content: center;
   opacity: ${({ isHidden }) => (isHidden ? '0' : '1')};
+  overflow: auto;
+  padding: 0 8px;
   transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  white-space: nowrap;
 `;

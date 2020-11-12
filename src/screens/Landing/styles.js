@@ -7,9 +7,9 @@ export default styled.div`
 
   .avatar {
     background-color: #f5fbff;
-    height: 400px;
+    height: ${({ size }) => size}px;
     position: relative;
-    width: 400px;
+    width: ${({ size }) => size}px;
   }
 
   .body {
@@ -17,7 +17,11 @@ export default styled.div`
     display: flex;
     flex-direction: column;
     flex: 1;
-    justify-content: center;
+    margin-top: 64px;
+
+    @media (max-width: 640px) {
+      margin-top: 16px;
+    }
   }
 
   .button {

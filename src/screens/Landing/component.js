@@ -5,11 +5,12 @@ import React, { useState, useCallback } from 'react';
 import { MorphReplace } from 'react-svg-morph';
 
 import Body from '../../components/SVG/Body';
-import Clothes from '../../components/SVG/Clothes';
-import Hair from '../../components/SVG/Hair';
-import Styled from './styles';
-import Footer from '../../components/Footer';
 import Button from '../../components/core/Button';
+import Clothes from '../../components/SVG/Clothes';
+import Footer from '../../components/Footer';
+import Hair from '../../components/SVG/Hair';
+import useWindowSize from '../../hooks/useWindowSize';
+import Styled from './styles';
 
 const initialColors = {
   body: '#FFE9D0',
@@ -25,6 +26,9 @@ const Landing = () => {
   const [clothes, setClothes] = useState('CARDIGAN');
   const [haircut, setHaircut] = useState('BOB_CUT_WITH_BANGS');
   const [isDownloading, setIsDownloading] = useState(false);
+
+  const { width } = useWindowSize();
+  const avatarSize = Math.min(400, width - 64);
 
   const onColorChange = useCallback(
     (key) => (hex) => setColors({ ...colors, [key]: hex }),
@@ -46,13 +50,25 @@ const Landing = () => {
   }, [setIsDownloading]);
 
   return (
-    <Styled>
+    <Styled size={avatarSize}>
       <div className="body">
         <div className="preview">
           <div className="avatar" id="avatar">
-            <Body color={colors.body} />
             <div className="svgContainer">
-              <MorphReplace height={400} rotation="none" width={400}>
+              <MorphReplace
+                height={avatarSize}
+                rotation="none"
+                width={avatarSize}
+              >
+                <Body color={colors.body} />
+              </MorphReplace>
+            </div>
+            <div className="svgContainer">
+              <MorphReplace
+                height={avatarSize}
+                rotation="none"
+                width={avatarSize}
+              >
                 <Clothes
                   key={`${clothes}_${colors.clothes}`}
                   clothes={clothes}
@@ -61,7 +77,11 @@ const Landing = () => {
               </MorphReplace>
             </div>
             <div className="svgContainer">
-              <MorphReplace height={400} rotation="none" width={400}>
+              <MorphReplace
+                height={avatarSize}
+                rotation="none"
+                width={avatarSize}
+              >
                 <Hair
                   key={`${haircut}_${colors.hair}`}
                   clothesColor={colors.clothes}
