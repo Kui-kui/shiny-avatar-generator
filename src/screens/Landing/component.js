@@ -60,7 +60,7 @@ const Landing = () => {
                 rotation="none"
                 width={avatarSize}
               >
-                <Body color={colors.body} />
+                <Body key={colors.body} color={colors.body} />
               </MorphReplace>
             </div>
             <div className="svgContainer">
