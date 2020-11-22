@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b101558e5d506e2b866bed5e873492c9",
+    "revision": "574e6367cf30a218f7cc5d38f916336d",
     "url": "/shiny-avatar-generator/index.html"
   },
   {
-    "revision": "3be34e6b7e79ef9b4b02",
+    "revision": "de770305752f61410574",
     "url": "/shiny-avatar-generator/static/css/main.de5683c8.chunk.css"
   },
   {
-    "revision": "78a39e0265da3a9a130a",
-    "url": "/shiny-avatar-generator/static/js/2.a79626d3.chunk.js"
+    "revision": "33d141b30335327a6342",
+    "url": "/shiny-avatar-generator/static/js/2.bc7e933e.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/shiny-avatar-generator/static/js/2.a79626d3.chunk.js.LICENSE.txt"
+    "url": "/shiny-avatar-generator/static/js/2.bc7e933e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3be34e6b7e79ef9b4b02",
-    "url": "/shiny-avatar-generator/static/js/main.aec8dc09.chunk.js"
+    "revision": "de770305752f61410574",
+    "url": "/shiny-avatar-generator/static/js/main.57a5e330.chunk.js"
   },
   {
     "revision": "a0157c747dd173c3b93e",
@@ -34,6 +34,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "d5adc477fe5044fc3cd37d542a3421c2",
     "url": "/shiny-avatar-generator/static/media/JACKET.d5adc477.png"
+  },
+  {
+    "revision": "c0e4c85762e382d1299698cae8fdd595",
+    "url": "/shiny-avatar-generator/static/media/OVERSHIRT.c0e4c857.png"
+  },
+  {
+    "revision": "321c2b0af1dbc6d873e142dd76cac473",
+    "url": "/shiny-avatar-generator/static/media/POCKET_TEE.321c2b0a.png"
   },
   {
     "revision": "bd7e4405752d29ed727315270057be3a",
