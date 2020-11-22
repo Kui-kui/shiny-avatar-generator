@@ -9,13 +9,15 @@ export const CLOTHES_COLORS = [
 ];
 
 export const CLOTHES_IDS = [
-  'SWEATER',
-  'TANK_TOP',
-  'STRIPED_JERSEY',
   'CARDIGAN',
   'FLOWERY_TEE',
-  'TEE',
   'JACKET',
+  'OVERSHIRT',
+  'POCKET_TEE',
+  'STRIPED_JERSEY',
+  'SWEATER',
+  'TANK_TOP',
+  'TEE',
 ];
 
 export const HAIR_COLORS = ['#FFD947', '#F0C014', '#C26604', '#17294D'];
