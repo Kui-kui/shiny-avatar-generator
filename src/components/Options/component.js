@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useContext } from 'react';
+
+import { LandingContext } from '../../common/context';
 import ColorPicker from '../core/ColorPicker';
 import ImagePicker from '../core/ImagePicker/component';
-
 import Styled from './styles';
 import {
   CLOTHES_COLORS,
@@ -12,22 +13,23 @@ import {
   SKIN_COLORS,
 } from './utils';
 
-const Options = ({
-  clothes,
-  colors,
-  haircut,
-  onColorChange,
-  setClothes,
-  setHaircut,
-  toggledOption,
-}) => {
+const Options = ({ toggledOption }) => {
+  const {
+    clothes,
+    colors,
+    haircut,
+    setClothes,
+    setColor,
+    setHaircut,
+  } = useContext(LandingContext);
+
   const getOption = () => {
     switch (toggledOption) {
       case 'SKIN_COLOR':
         return (
           <ColorPicker
             colors={SKIN_COLORS}
-            onColorChange={onColorChange('body')}
+            onColorChange={setColor('body')}
             selectedColor={colors.body}
           />
         );
@@ -44,7 +46,7 @@ const Options = ({
         return (
           <ColorPicker
             colors={HAIR_COLORS}
-            onColorChange={onColorChange('hair')}
+            onColorChange={setColor('hair')}
             selectedColor={colors.hair}
           />
         );
@@ -61,7 +63,7 @@ const Options = ({
         return (
           <ColorPicker
             colors={CLOTHES_COLORS}
-            onColorChange={onColorChange('clothes')}
+            onColorChange={setColor('clothes')}
             selectedColor={colors.clothes}
           />
         );
@@ -75,16 +77,6 @@ const Options = ({
 };
 
 Options.propTypes = {
-  clothes: PropTypes.string.isRequired,
-  colors: PropTypes.shape({
-    body: PropTypes.string.isRequired,
-    clothes: PropTypes.string.isRequired,
-    hair: PropTypes.string.isRequired,
-  }).isRequired,
-  haircut: PropTypes.string.isRequired,
-  onColorChange: PropTypes.func.isRequired,
-  setClothes: PropTypes.func.isRequired,
-  setHaircut: PropTypes.func.isRequired,
   toggledOption: PropTypes.string.isRequired,
 };
 

@@ -1,18 +1,10 @@
 import React, { useState, useCallback, useEffect } from 'react';
-import PropTypes from 'prop-types';
 
 import Options from '../Options';
 import OptionLabel from '../OptionLabel';
 import Styled, { OptionContainer } from './styles';
 
-const Footer = ({
-  clothes,
-  colors,
-  haircut,
-  onColorChange,
-  setClothes,
-  setHaircut,
-}) => {
+const Footer = () => {
   const [isHidden, setIsHidden] = useState(false);
   const [toggledOption, setToggledOption] = useState('');
   const [footerHeight, setFooterHeight] = useState(0);
@@ -45,15 +37,7 @@ const Footer = ({
         <p className="toggleChevron">▾</p>
       </div>
       <OptionContainer isHidden={toggledOption === ''}>
-        <Options
-          clothes={clothes}
-          colors={colors}
-          haircut={haircut}
-          onColorChange={onColorChange}
-          setClothes={setClothes}
-          setHaircut={setHaircut}
-          toggledOption={toggledOption}
-        />
+        <Options toggledOption={toggledOption} />
       </OptionContainer>
       <div className="labels">
         <OptionLabel
@@ -84,19 +68,6 @@ const Footer = ({
       </div>
     </Styled>
   );
-};
-
-Footer.propTypes = {
-  clothes: PropTypes.string.isRequired,
-  colors: PropTypes.shape({
-    body: PropTypes.string.isRequired,
-    clothes: PropTypes.string.isRequired,
-    hair: PropTypes.string.isRequired,
-  }).isRequired,
-  haircut: PropTypes.string.isRequired,
-  onColorChange: PropTypes.func.isRequired,
-  setClothes: PropTypes.func.isRequired,
-  setHaircut: PropTypes.func.isRequired,
 };
 
 export default Footer;

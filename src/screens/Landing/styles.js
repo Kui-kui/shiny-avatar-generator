@@ -33,9 +33,4 @@ export default styled.div`
     border: 20px solid white;
     margin-bottom: 24px;
   }
-
-  .svgContainer {
-    position: absolute;
-    top: 0;
-  }
 `;
