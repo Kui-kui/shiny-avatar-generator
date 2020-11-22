@@ -11,7 +11,7 @@ const initialColors = {
 
 const LandingContainer = () => {
   const [colors, setColors] = useState(initialColors);
-  const [beard, setBeard] = useState('LONG_BEARD');
+  const [beard, setBeard] = useState('NO_BEARD');
   const [clothes, setClothes] = useState('CARDIGAN');
   const [haircut, setHaircut] = useState('BOB_CUT_WITH_BANGS');
 
