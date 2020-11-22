@@ -3,16 +3,25 @@ import React, { useCallback, useContext } from 'react';
 import { MorphReplace } from 'react-svg-morph';
 
 import { LandingContext } from '../../common/context';
+import Beard from './Beard';
 import Body from './Body';
 import Clothes from './Clothes';
 import Hair from './Hair';
 import Styled from './styles';
 
 const AvatarPart = ({ avatarSize, part }) => {
-  const { colors, clothes, haircut } = useContext(LandingContext);
+  const { beard, colors, clothes, haircut } = useContext(LandingContext);
 
   const getContent = useCallback(() => {
     switch (part) {
+      case 'BEARD':
+        return (
+          <Beard
+            key={`${beard}_${colors.hair}`}
+            beard={beard}
+            color={colors.hair}
+          />
+        );
       case 'BODY':
         return <Body key={colors.body} color={colors.body} />;
       case 'CLOTHES':
@@ -35,10 +44,14 @@ const AvatarPart = ({ avatarSize, part }) => {
       default:
         return null;
     }
-  }, [colors, clothes, haircut, part]);
+  }, [beard, colors, clothes, haircut, part]);
+
+  if (beard === 'NO_BEARD' && part === 'BEARD') {
+    return null;
+  }
 
   return (
-    <Styled>
+    <Styled part={part}>
       <MorphReplace height={avatarSize} rotation="none" width={avatarSize}>
         {getContent()}
       </MorphReplace>

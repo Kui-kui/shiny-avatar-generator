@@ -51,6 +51,11 @@ const Footer = () => {
           onClick={() => toggle('HAIRCUT')}
         />
         <OptionLabel
+          isSelected={toggledOption === 'BEARD'}
+          label="Beard"
+          onClick={() => toggle('BEARD')}
+        />
+        <OptionLabel
           isSelected={toggledOption === 'HAIR_COLOR'}
           label="Hair color"
           onClick={() => toggle('HAIR_COLOR')}

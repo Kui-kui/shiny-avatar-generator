@@ -8,6 +8,8 @@ export const CLOTHES_COLORS = [
   '#17294C',
 ];
 
+export const BEARD_IDS = ['NO_BEARD', 'TWO_DAY_BEARD', 'LONG_BEARD'];
+
 export const CLOTHES_IDS = [
   'CARDIGAN',
   'FLOWERY_TEE',

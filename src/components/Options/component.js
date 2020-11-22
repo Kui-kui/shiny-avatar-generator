@@ -6,6 +6,7 @@ import ColorPicker from '../core/ColorPicker';
 import ImagePicker from '../core/ImagePicker/component';
 import Styled from './styles';
 import {
+  BEARD_IDS,
   CLOTHES_COLORS,
   CLOTHES_IDS,
   HAIRCUT_IDS,
@@ -15,9 +16,11 @@ import {
 
 const Options = ({ toggledOption }) => {
   const {
+    beard,
     clothes,
     colors,
     haircut,
+    setBeard,
     setClothes,
     setColor,
     setHaircut,
@@ -31,6 +34,15 @@ const Options = ({ toggledOption }) => {
             colors={SKIN_COLORS}
             onColorChange={setColor('body')}
             selectedColor={colors.body}
+          />
+        );
+      case 'BEARD':
+        return (
+          <ImagePicker
+            images={BEARD_IDS}
+            onClick={setBeard}
+            pathPrefix="beard"
+            selectedImage={beard}
           />
         );
       case 'HAIRCUT':

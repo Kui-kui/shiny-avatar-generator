@@ -11,6 +11,7 @@ const initialColors = {
 
 const LandingContainer = () => {
   const [colors, setColors] = useState(initialColors);
+  const [beard, setBeard] = useState('LONG_BEARD');
   const [clothes, setClothes] = useState('CARDIGAN');
   const [haircut, setHaircut] = useState('BOB_CUT_WITH_BANGS');
 
@@ -20,9 +21,11 @@ const LandingContainer = () => {
   );
 
   const context = {
+    beard,
     clothes,
     colors,
     haircut,
+    setBeard,
     setClothes,
     setColor: onColorChange,
     setColors,

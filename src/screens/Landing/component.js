@@ -35,6 +35,7 @@ const Landing = () => {
       <div className="body">
         <div className="preview">
           <div className="avatar" id="avatar">
+            <AvatarPart avatarSize={avatarSize} part="BEARD" />
             <AvatarPart avatarSize={avatarSize} part="BODY" />
             <AvatarPart avatarSize={avatarSize} part="CLOTHES" />
             <AvatarPart avatarSize={avatarSize} part="HAIR" />
