@@ -30,6 +30,7 @@ export const HAIRCUT_IDS = [
   'PONYTAIL',
   'LONG_AND_VOLUMINOUS',
   'SHORT_BOB_CUT',
+  'VOLUMINOUS',
 ];
 
 export const SKIN_COLORS = ['#FFE9D0', '#F7D2A7', '#C26604'];
