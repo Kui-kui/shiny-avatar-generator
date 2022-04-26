@@ -1,7 +1,7 @@
 /* global document */
 import domtoimage from 'dom-to-image';
 import FileSaver from 'file-saver';
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useMemo } from 'react';
 
 import sleep from '../../common/sleep';
 import Button from '../../components/core/Button';
@@ -13,8 +13,11 @@ import AvatarPart from '../../components/AvatarPart/component';
 const Landing = () => {
   const [isDownloading, setIsDownloading] = useState(false);
 
-  const { width } = useWindowSize();
-  const avatarSize = Math.min(400, width - 64);
+  const { height, width } = useWindowSize();
+  const avatarSize = useMemo(
+    () => Math.min(400, Math.min(height - 239, width - 64)),
+    [height, width],
+  );
 
   const downloadAvatar = useCallback(async () => {
     setIsDownloading(true);

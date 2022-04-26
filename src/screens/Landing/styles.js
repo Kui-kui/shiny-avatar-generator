@@ -17,10 +17,13 @@ export default styled.div`
     display: flex;
     flex-direction: column;
     flex: 1;
-    margin-top: 64px;
+    justify-content: center;
+    margin-bottom: 64px;
+    margin-top: 16px;
 
     @media (max-width: 640px) {
-      margin-top: 16px;
+      justify-content: flex-start;
+      margin-bottom: 0;
     }
   }
 
